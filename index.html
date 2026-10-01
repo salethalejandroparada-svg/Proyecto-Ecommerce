@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>E-Commerce | Inicio</title><link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header><div class="container nav"><a class="logo" href="index.html">E-Commerce</a><nav><a href="index.html">Inicio</a><a href="#productos">Productos</a><a href="login.html">Login</a><a href="admin.html">Administración</a></nav><button id="cartButton">Carrito (<span id="cartCount">0</span>)</button></div></header>
+<main>
+<section class="hero"><div class="container"><h1>Tienda virtual E-Commerce</h1><p>Compra productos de forma sencilla, rápida y organizada.</p><a class="btn" href="#productos">Ver productos</a></div></section>
+<section id="productos" class="container section"><h2>Productos disponibles</h2><div id="productGrid" class="grid"></div></section>
+</main>
+<aside id="cartPanel" class="cart" aria-hidden="true"><button id="closeCart" class="close">×</button><h2>Carrito de compras</h2><div id="cartItems"></div><h3>Total: <span id="cartTotal">$0</span></h3><button id="checkoutButton" class="btn">Finalizar compra</button></aside>
+<div id="overlay" class="overlay" hidden></div>
+<footer><p>Proyecto E-Commerce · Formación SENA</p></footer>
+<script src="js/app.js"></script>
+</body></html>
