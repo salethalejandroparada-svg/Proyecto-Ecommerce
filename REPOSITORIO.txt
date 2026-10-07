@@ -2,20 +2,5 @@ EVIDENCIA: GA7-220501096-AA2-EV01
 APRENDIZ: SALETH ALEJANDRO PARADA MONROY
 PROYECTO: E-Commerce
 
-USAR EL MISMO REPOSITORIO GITHUB DEL PROYECTO E-COMMERCE YA CREADO.
-
-No es necesario crear un repositorio nuevo.
-Al copiar estos archivos dentro de la carpeta local Proyecto-Ecommerce que ya contiene .git,
-Git conservará automáticamente el remoto configurado anteriormente.
-
-Comprobar antes de subir:
-git remote -v
-
-Después:
-git status
-git add .
-git commit -m "GA7 AA2 EV01 - Modulo JDBC CRUD E-Commerce"
-git push origin main
-
-URL DEL REPOSITORIO:
-La URL ya configurada se puede consultar con: git remote -v
+ENLACE DEL REPOSITORIO:
+https://github.com/salethalejandroparada-svg/Proyecto-Ecommerce
