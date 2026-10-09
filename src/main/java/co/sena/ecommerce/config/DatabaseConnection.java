@@ -18,6 +18,6 @@ public final class DatabaseConnection {
     private DatabaseConnection() {}
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(PROPERTIES.getProperty("db.url"),
-                PROPERTIES.getProperty("db.user"), PROPERTIES.getProperty("db.password"));
+                PROPERTIES.getProperty("db.user"), System.getenv().getOrDefault("ECOMMERCE_DB_PASSWORD", ""));
     }
 }

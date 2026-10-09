@@ -1,6 +1,3 @@
-EVIDENCIA: GA7-220501096-AA2-EV01
+EVIDENCIA: GA7-220501096-AA3-EV01
 APRENDIZ: SALETH ALEJANDRO PARADA MONROY
-PROYECTO: E-Commerce
-
-ENLACE DEL REPOSITORIO:
-https://github.com/salethalejandroparada-svg/Proyecto-Ecommerce
+REPOSITORIO: https://github.com/salethalejandroparada-svg/Proyecto-Ecommerce

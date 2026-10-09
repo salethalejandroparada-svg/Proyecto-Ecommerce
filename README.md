@@ -1,59 +1,23 @@
-# Proyecto E-Commerce - GA7-220501096-AA2-EV01
+# Proyecto E-Commerce integrado — GA7-220501096-AA3-EV01
+**Aprendiz:** Saleth Alejandro Parada Monroy
 
-**Aprendiz:** SALETH ALEJANDRO PARADA MONROY  
-**Evidencia:** Codificación de módulos del software  
-**Proyecto:** E-Commerce
+## Componentes
+- E-Commerce original: `index.html`, `login.html`, `admin.html`, `css/`, `js/`.
+- Java stand-alone y JDBC: `Main.java`, `Product`, `ProductDAO`, `ProductService`.
+- Spring Boot: `EcommerceApplication`, `ProductRestController`, API `/api/productos` y cliente web en `src/main/resources/static/`.
+- Evidencia anterior Servlet/JSP preservada en `evidencias-anteriores/GA7-AA2-EV02/` para evitar incompatibilidades de compilación.
 
-## Continuidad del proyecto
-Esta entrega amplía el mismo Proyecto-Ecommerce trabajado y versionado en las evidencias anteriores.
-No se requiere crear un repositorio GitHub diferente.
+## Ejecución en Windows (PowerShell)
+1. Importar `database/ecommerce.sql` en MySQL Workbench (si ya lo hizo, no repetir INSERT).
+2. En la terminal de VS Code, configurar la contraseña **solo para la sesión**:
+   `$env:ECOMMERCE_DB_PASSWORD = Read-Host 'Contraseña MySQL'`
+3. Ejecutar `mvn clean package` y `mvn spring-boot:run`.
+4. Abrir `http://localhost:8080/`.
+5. Crear, consultar, editar y eliminar productos; verificar cambios en MySQL.
 
-## Módulo implementado
-Se agregó un módulo Java 17 con JDBC y MySQL para administrar productos mediante CRUD:
+La contraseña no se guarda en el proyecto. **No subir contraseñas ni capturas con secretos a GitHub.**
 
-- Inserción.
-- Consulta general.
-- Consulta por ID.
-- Actualización.
-- Eliminación.
+## Git
+Se conserva la carpeta `.git` original y su remoto. Revisar `git status` y `git remote -v` antes de `git add .`, `git commit` y `git push origin main`.
 
-## Arquitectura
-- `config`: conexión JDBC.
-- `model`: clase `Product`.
-- `dao`: acceso a datos con `ProductDAO`.
-- `service`: validaciones y reglas.
-- `Main`: módulo stand-alone por consola.
-- `database`: script MySQL.
-- HTML/CSS/JavaScript: interfaces del E-Commerce desarrolladas previamente.
-
-## Estándares
-- Paquetes: minúsculas.
-- Clases: PascalCase.
-- Métodos y variables: camelCase.
-- Constantes: MAYUSCULA_CON_GUION_BAJO.
-- Consultas parametrizadas con `PreparedStatement`.
-- Recursos JDBC cerrados con try-with-resources.
-
-## Preparación de MySQL
-1. Ejecutar `database/ecommerce.sql`.
-2. Revisar `src/main/resources/database.properties`.
-3. Si MySQL tiene contraseña, escribirla en `db.password`.
-
-## Ejecución
-```bash
-mvn clean compile
-mvn exec:java
-```
-
-## Subir al repositorio existente
-Copiar el contenido de esta entrega dentro de la carpeta local `Proyecto-Ecommerce` que ya está conectada a GitHub.
-
-```bash
-git remote -v
-git status
-git add .
-git commit -m "GA7 AA2 EV01 - Modulo JDBC CRUD E-Commerce"
-git push origin main
-```
-
-No ejecutar `git init` ni `git remote add origin` si el repositorio anterior ya conserva su carpeta `.git`.
+Repositorio: https://github.com/salethalejandroparada-svg/Proyecto-Ecommerce
