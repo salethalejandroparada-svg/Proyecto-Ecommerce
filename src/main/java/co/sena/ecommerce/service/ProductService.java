@@ -5,17 +5,21 @@ import java.math.BigDecimal;
 import java.sql.SQLException;
 import java.util.*;
 
+/** Capa de negocio: valida los datos antes de delegar las operaciones al DAO. */
 public class ProductService {
     private final ProductDAO productDAO=new ProductDAO();
+    /** Valida y registra un producto nuevo, activo por defecto. */
     public Product create(String name,String description,BigDecimal price,int stock)throws SQLException{
         validate(name,description,price,stock);Product p=new Product(name.trim(),description.trim(),price,stock,true);productDAO.insert(p);return p;
     }
     public List<Product> findAll()throws SQLException{return productDAO.findAll();}
     public Optional<Product> findById(int id)throws SQLException{return productDAO.findById(id);}
+    /** Actualiza un registro y devuelve false cuando el ID no existe. */
     public boolean update(int id,String name,String description,BigDecimal price,int stock,boolean active)throws SQLException{
         validate(name,description,price,stock);return productDAO.update(new Product(id,name.trim(),description.trim(),price,stock,active))>0;
     }
     public boolean delete(int id)throws SQLException{return productDAO.delete(id)>0;}
+    /** Aplica reglas de negocio comunes a la creación y edición. */
     private void validate(String name,String description,BigDecimal price,int stock){
         if(name==null||name.isBlank())throw new IllegalArgumentException("El nombre es obligatorio.");
         if(description==null||description.isBlank())throw new IllegalArgumentException("La descripción es obligatoria.");

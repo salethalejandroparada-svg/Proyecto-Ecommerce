@@ -1,0 +1,17 @@
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'REPOSITORIO.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pom.xml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/java/co/sena/ecommerce/config/DatabaseConnection.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/resources/database.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'evidencias-anteriores/GA7-AA2-EV02/ProductServlet.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'evidencias-anteriores/GA7-AA2-EV02/webapp/WEB-INF/views/product-form.jsp', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'evidencias-anteriores/GA7-AA2-EV02/webapp/WEB-INF/views/product-list.jsp', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'evidencias-anteriores/GA7-AA2-EV02/webapp/css/styles.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'evidencias-anteriores/GA7-AA2-EV02/webapp/index.jsp', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/java/co/sena/ecommerce/EcommerceApplication.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/java/co/sena/ecommerce/controller/ApiErrorHandler.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/java/co/sena/ecommerce/controller/ProductRestController.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/resources/application.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/resources/static/app.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/resources/static/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/resources/static/styles.css', LF will be replaced by CRLF the next time Git touches it

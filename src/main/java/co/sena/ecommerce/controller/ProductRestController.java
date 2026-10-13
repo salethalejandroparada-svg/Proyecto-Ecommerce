@@ -4,7 +4,8 @@ import co.sena.ecommerce.service.ProductService;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-/** Controlador REST que reutiliza la capa JDBC de la EV01. */
+/** API REST de productos: GET consulta, POST crea, PUT actualiza y DELETE elimina.
+ * Reutiliza las validaciones del servicio y la persistencia JDBC del DAO. */
 @RestController
 @RequestMapping("/api/productos")
 public class ProductRestController {
