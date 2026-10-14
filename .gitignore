@@ -6,3 +6,8 @@ target/
 .vscode/
 .idea/
 *.iml
+!.env.example
+
+# React / Vite
+**/node_modules/
+**/dist/
