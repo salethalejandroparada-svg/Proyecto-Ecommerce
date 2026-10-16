@@ -1,5 +1,28 @@
-﻿Evidencia: GA7-220501096-AA4-EV03
-Aprendiz: SALETH ALEJANDRO PARADA MONROY
+﻿APRENDIZ: SALETH ALEJANDRO PARADA MONROY
+PROGRAMA: ANALISIS Y DESARROLLO DE SOFTWARE
+EVIDENCIA: GA7-220501096-AA5-EV01
+TEMA: DISENO Y DESARROLLO DE SERVICIOS WEB
 
-Repositorio GitHub:
+REPOSITORIO GITHUB:
 https://github.com/salethalejandroparada-svg/Proyecto-Ecommerce
+
+SERVICIOS WEB IMPLEMENTADOS:
+
+1. POST /api/auth/registro
+   Registra usuarios, valida los datos y protege
+   las contrasenas mediante BCrypt.
+
+2. POST /api/auth/login
+   Comprueba las credenciales del usuario y
+   devuelve el resultado de la autenticacion.
+
+BASE DE DATOS:
+MySQL 8 - ecommerce - tabla usuarios.
+
+TECNOLOGIAS:
+Java 17, Spring Boot 3.3.5, JDBC, MySQL y BCrypt.
+
+PRUEBAS:
+Registro correcto, inicio de sesion correcto,
+credenciales incorrectas, correo duplicado,
+correo invalido, contrasena corta y nombre vacio.
