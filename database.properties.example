@@ -1,0 +1,8 @@
+﻿# Configuracion de ejemplo para MySQL
+# Copiar a src/main/resources/database.properties
+
+db.url=jdbc:mysql://localhost:3306/ecommerce
+db.user=root
+
+# La contrasena se obtiene de la variable de entorno
+# ECOMMERCE_DB_PASSWORD

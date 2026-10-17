@@ -11,3 +11,6 @@ target/
 # React / Vite
 **/node_modules/
 **/dist/
+
+# Configuracion privada de MySQL
+**/database.properties
