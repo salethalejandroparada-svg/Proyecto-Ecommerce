@@ -1,0 +1,118 @@
+﻿EVIDENCIA GA7-220501096-AA5-EV03
+DISENO Y DESARROLLO DE SERVICIOS WEB - PROYECTO
+
+Aprendiz: SALETH ALEJANDRO PARADA MONROY
+Proyecto: E-Commerce
+Tecnologia: Java 17, Spring Boot, JDBC y MySQL
+URL base: http://localhost:8080
+
+==================================================
+1. REGISTRO DE USUARIOS
+==================================================
+Metodo: POST
+Endpoint: /api/auth/registro
+
+Datos JSON:
+{
+  "nombre": "Usuario Ejemplo",
+  "correo": "usuario@example.com",
+  "contrasena": "ClaveSegura2026!"
+}
+
+Respuesta exitosa: HTTP 201 Created
+{"mensaje":"Usuario registrado correctamente"}
+
+Errores:
+400 - Datos invalidos
+409 - Correo electronico duplicado
+
+==================================================
+2. INICIO DE SESION
+==================================================
+Metodo: POST
+Endpoint: /api/auth/login
+
+Datos JSON:
+{
+  "correo": "usuario@example.com",
+  "contrasena": "ClaveSegura2026!"
+}
+
+Respuesta exitosa: HTTP 200 OK
+{"mensaje":"Autenticacion satisfactoria"}
+
+Errores:
+400 - Correo invalido o contrasena vacia
+401 - Credenciales incorrectas
+
+==================================================
+3. CONSULTAR TODOS LOS PRODUCTOS
+==================================================
+Metodo: GET
+Endpoint: /api/productos
+
+Respuesta exitosa: HTTP 200 OK
+Devuelve una lista JSON de productos.
+
+==================================================
+4. CONSULTAR PRODUCTO POR ID
+==================================================
+Metodo: GET
+Endpoint: /api/productos/{id}
+
+Respuesta exitosa: HTTP 200 OK
+Error: HTTP 404 si no existe el producto.
+
+==================================================
+5. REGISTRAR PRODUCTO
+==================================================
+Metodo: POST
+Endpoint: /api/productos
+
+Datos JSON:
+{
+  "name": "Teclado",
+  "description": "Teclado USB",
+  "price": 85000,
+  "stock": 10
+}
+
+Respuesta exitosa: HTTP 201 Created
+Error: HTTP 400 si los datos no cumplen las validaciones.
+
+==================================================
+6. ACTUALIZAR PRODUCTO
+==================================================
+Metodo: PUT
+Endpoint: /api/productos/{id}
+
+Datos JSON:
+{
+  "name": "Teclado actualizado",
+  "description": "Teclado USB",
+  "price": 90000,
+  "stock": 8,
+  "active": true
+}
+
+Respuesta exitosa: HTTP 204 No Content
+Errores:
+400 - Datos invalidos
+404 - Producto inexistente
+
+==================================================
+7. ELIMINAR PRODUCTO
+==================================================
+Metodo: DELETE
+Endpoint: /api/productos/{id}
+
+Respuesta exitosa: HTTP 204 No Content
+Error: HTTP 404 si no existe el producto.
+
+==================================================
+REPOSITORIO
+==================================================
+https://github.com/salethalejandroparada-svg/Proyecto-Ecommerce
+
+Nota: El inicio de sesion valida credenciales.
+No genera tokens JWT ni sesiones de autenticacion.
