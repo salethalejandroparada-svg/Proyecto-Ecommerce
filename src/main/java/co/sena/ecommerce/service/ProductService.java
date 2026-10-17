@@ -7,7 +7,9 @@ import java.util.*;
 
 /** Capa de negocio: valida los datos antes de delegar las operaciones al DAO. */
 public class ProductService {
-    private final ProductDAO productDAO=new ProductDAO();
+    private final ProductDAO productDAO;
+    public ProductService(){this(new ProductDAO());}
+    public ProductService(ProductDAO productDAO){this.productDAO=java.util.Objects.requireNonNull(productDAO);}
     /** Valida y registra un producto nuevo, activo por defecto. */
     public Product create(String name,String description,BigDecimal price,int stock)throws SQLException{
         validate(name,description,price,stock);Product p=new Product(name.trim(),description.trim(),price,stock,true);productDAO.insert(p);return p;

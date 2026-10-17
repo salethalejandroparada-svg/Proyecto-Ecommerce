@@ -20,7 +20,10 @@ import org.springframework.web.server.ResponseStatusException;
  */
 public class AuthService {
 
-    private final UserDAO userDAO = new UserDAO();
+    private final UserDAO userDAO;
+
+    public AuthService(){this(new UserDAO());}
+    public AuthService(UserDAO userDAO){this.userDAO=java.util.Objects.requireNonNull(userDAO);}
 
     // BCrypt protege las contrasenas mediante un hash con sal.
     private final BCryptPasswordEncoder passwordEncoder =
